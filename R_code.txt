@@ -1,0 +1,10 @@
+y <- c(951,912,1089,1320,1617,1154,1024,1381,1873,2168,745,736 )
+x <- c(3.1699,3,3.9068,4.4594,5,4.75488,4.54849,5.781,6.3923,6.9168,2.5849,2.3219)
+mod <- lm(y ~ x)
+cf <- coef(mod)
+Intercept <- cf[1]
+Slope <- cf[2]
+print(Intercept)
+print(Slope)
+plot(x, y, main="MT", xlab="ID", ylab="Movement Time(miliSecond)")
+abline(Intercept,Slope); 
